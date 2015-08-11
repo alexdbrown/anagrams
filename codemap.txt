@@ -1,0 +1,29 @@
+Anagrams Plain English Codemap
+
+Behavior= Single word compared with an exact match returns exact match
+Input= 'bread', 'bread'
+Output= ['bread']
+
+Behavior= Separate words in the list
+Input = 'rat', 'tar, art'
+Output = ['rat'], ['tar', 'art']
+
+Behavior= Use explode to put letters in array
+Input= 'rat', 'tar'
+Output= ['r','a','t'], ['t', 'a', 'r']
+
+Behavior= Use sort to put them in order
+Input= 'rat', 'tar'
+Output= ['a', 'r', 't'], ['a', 'r', 't']
+
+Behavior= Recognize matching arrays
+Input= 'rat', 'tar'
+Output= is true
+
+Behavior= return original word if it is a match
+Input= 'rat', 'tar'
+Output= 'tar'
+
+Behavior= return multiple words if they are a match
+Input='rat', 'tar', 'art'
+Output= 'tar', 'art'

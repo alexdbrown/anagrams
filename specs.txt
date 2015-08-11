@@ -1,29 +1,17 @@
 Anagrams Plain English Spec List
 
-Behavior= user inputs bread and bread, computer returns ['bread']
+Behavior= Single word compared with an exact match returns exact match
 Input= 'bread', 'bread'
 Output= ['bread']
 
-Behavior= Use explode to put list words in array
-Input = 'rat', 'tar, art'
-Output = ['rat'], ['tar', 'art']
+Behavior= Single word compared with anagram returns anagram
+Input= 'stressed', 'dessert'
+Output= 'dessert'
 
-Behavior= Use explode to put letters in array
-Input= 'rat', 'tar'
-Output= ['r','a','t'], ['t', 'a', 'r']
+Behavior= Single word compared with multiple word returns any anagrams
+Input= 'rat', 'art, tar'
+Output= 'art', 'tar'
 
-Behavior= Use sort to put them in order
-Input= 'rat', 'tar'
-Output= ['a', 'r', 't'], ['a', 'r', 't']
-
-Behavior= Recognize matching arrays
-Input= 'rat', 'tar'
-Output= is true
-
-Behavior= return original word if it is a match
-Input= 'rat', 'tar'
-Output= 'tar'
-
-Behavior= return multiple words if they are a match
-Input='rat', 'tar', 'art'
-Output= 'tar', 'art'
+Behavior= Single word compared with multiple words returns ONLY anagrams
+Input= 'cool', 'loco, milk'
+Output= 'loco'
