@@ -34,7 +34,7 @@
         function test_anagramFinder_anyAnagram()
         {
             //Arrange
-            $test_anagram = new Anagram;
+            $test_Anagram = new Anagram;
             $word = "rat";
             $list = "art, tar";
 
@@ -42,7 +42,7 @@
             $result = $test_Anagram->anagramFinder($word, $list);
 
             //Assert
-            $this->assertEquals(['art', 'tar'], $result);
+            $this->assertEquals("art, tar", $result);
         }
     }
 ?>

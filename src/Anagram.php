@@ -5,12 +5,19 @@
         {
             $word = strtolower($word);
             $list = strtolower($list);
+            $list_as_array = explode(", ", $list);
             $input_word_array = str_split($word);
-            $input_list_array = str_split($list);
+            $anagrams_array = array();
 
-            if (sort($input_word_array) == sort($input_list_array)) {
-                return $list;
+            foreach ($list_as_array as $list_word) {
+                $list_word_as_string = str_split($list_word);
+                if (sort($input_word_array) == sort($list_word_as_string)) {
+                    array_push($anagrams_array, $list_word);
+                }
             }
+
+            return implode(", ", $anagrams_array);
+
         }
     }
 ?>
