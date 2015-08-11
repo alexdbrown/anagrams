@@ -56,7 +56,7 @@
             $result = $test_Anagram->anagramFinder($word, $list);
 
             //Assert
-            $this->assertEquals("loco, cool", $result);
+            $this->assertEquals("loco", $result);
         }
     }
 ?>

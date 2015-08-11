@@ -14,7 +14,9 @@
                 sort($input_word_array);
                 sort($list_word_as_array);
                 if ($input_word_array == $list_word_as_array) {
-                    array_push($anagrams_array, $list_word);
+                    if ($word != $list_word) {
+                        array_push($anagrams_array, $list_word);
+                    }
                 }
             }
 
