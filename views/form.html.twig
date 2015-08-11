@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+        <title>Anagrams?</title>
+    </head>
+    <body>
+        <div class='container'>
+            <h1>Anagram Finder</h1>
+            <h4>Enter your start word:</h4>
+            <form action='/view_anagrams'>
+                <div class='form-group'>
+                    <label for='word'>Insert Word</label>
+                    <input id='word' name='word' type='text' class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <label for='list'>Enter list (word1, word2)</label>
+                    <input id='list' name='list' type='text' class='form-control'>
+                </div>
+                <button type='submit' class='btn-danger'>See Anagrams</button>
+            </form>
+        </div>
+    </body>
+</html>
