@@ -30,5 +30,19 @@
             //Assert
             $this->assertEquals("dessert", $result);
         }
+
+        function test_anagramFinder_anyAnagram()
+        {
+            //Arrange
+            $test_anagram = new Anagram;
+            $word = "rat";
+            $list = "art, tar";
+
+            //Act
+            $result = $test_Anagram->anagramFinder($word, $list);
+
+            //Assert
+            $this->assertEquals(['art', 'tar'], $result);
+        }
     }
 ?>
