@@ -10,8 +10,10 @@
             $anagrams_array = array();
 
             foreach ($list_as_array as $list_word) {
-                $list_word_as_string = str_split($list_word);
-                if (sort($input_word_array) == sort($list_word_as_string)) {
+                $list_word_as_array = str_split($list_word);
+                sort($input_word_array);
+                sort($list_word_as_array);
+                if ($input_word_array == $list_word_as_array) {
                     array_push($anagrams_array, $list_word);
                 }
             }

@@ -13,5 +13,5 @@ Input= 'rat', 'art, tar'
 Output= 'art', 'tar'
 
 Behavior= Single word compared with multiple words returns ONLY anagrams
-Input= 'cool', 'loco, milk'
+Input= 'cool', 'loco, milk, cool'
 Output= 'loco'

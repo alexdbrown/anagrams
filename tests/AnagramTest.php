@@ -22,13 +22,13 @@
             //Arrange
             $test_Anagram = new Anagram;
             $word = "stressed";
-            $list = "dessert";
+            $list = "desserts";
 
             //Act
             $result = $test_Anagram->anagramFinder($word, $list);
 
             //Assert
-            $this->assertEquals("dessert", $result);
+            $this->assertEquals("desserts", $result);
         }
 
         function test_anagramFinder_anyAnagram()
@@ -43,6 +43,20 @@
 
             //Assert
             $this->assertEquals("art, tar", $result);
+        }
+
+        function test_anagramFinder_onlyAnagram()
+        {
+            //Arrange
+            $test_Anagram = new Anagram;
+            $word = "cool";
+            $list = "loco, milk, cool";
+
+            //Act
+            $result = $test_Anagram->anagramFinder($word, $list);
+
+            //Assert
+            $this->assertEquals("loco, cool", $result);
         }
     }
 ?>
