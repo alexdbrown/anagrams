@@ -1,8 +1,12 @@
 Anagrams Plain English Spec List
 
-Behavior= Single word compared with an exact match returns exact match
+Behavior= Single word compared with an exact match returns empty string
 Input= 'bread', 'bread'
-Output= ['bread']
+Output= ''
+
+Behavior= All capitalized letters should be lowercased
+Input= 'Bread', 'BEARD'
+Output= 'beard'
 
 Behavior= Single word compared with anagram returns anagram
 Input= 'stressed', 'dessert'

@@ -14,7 +14,21 @@
             $result = $test_Anagram->anagramFinder($word, $list);
 
             //Assert
-            $this->assertEquals("bread", $result);
+            $this->assertEquals("", $result);
+        }
+
+        function test_anagramFinder_capsOff()
+        {
+            //Arrange
+            $test_Anagram = new Anagram;
+            $word = "Bread";
+            $list = "BEARD";
+
+            //Act
+            $result = $test_Anagram->anagramFinder($word, $list);
+
+            //Assert
+            $this->assertEquals("beard", $result);
         }
 
         function test_anagramFinder_oneAnagram()

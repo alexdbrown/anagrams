@@ -9,13 +9,13 @@
     ));
 
     $app->get("/", function() use ($app) {
-        return $app['twig']->render('form.twig.html');
+        return $app['twig']->render('form.html.twig');
     });
 
     $app->get("/view_anagrams", function() use ($app) {
         $my_Anagram = new Anagram;
         $your_anagrams = $my_Anagram->anagramFinder($_GET['word'], $_GET['list']);
-        return $app['twig']->render('view.twig.html', array('result' => $your_anagrams));
+        return $app['twig']->render('view.html.twig', array('result' => $your_anagrams));
     });
 
     return $app;
