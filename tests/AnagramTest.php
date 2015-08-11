@@ -16,5 +16,19 @@
             //Assert
             $this->assertEquals("bread", $result);
         }
+
+        function test_anagramFinder_oneAnagram()
+        {
+            //Arrange
+            $test_Anagram = new Anagram;
+            $word = "stressed";
+            $list = "dessert";
+
+            //Act
+            $result = $test_anagram->anagramFinder($word, $list);
+
+            //Assert
+            $this->assertEquals("dessert", $result);
+        }
     }
 ?>
