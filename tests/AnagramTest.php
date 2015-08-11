@@ -25,7 +25,7 @@
             $list = "dessert";
 
             //Act
-            $result = $test_anagram->anagramFinder($word, $list);
+            $result = $test_Anagram->anagramFinder($word, $list);
 
             //Assert
             $this->assertEquals("dessert", $result);
